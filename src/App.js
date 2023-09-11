@@ -37,10 +37,8 @@ import MapScreen from './screens/MapScreen';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
 import useTitle from './useTitle';
-
-import playstore1 from '../src/images/playstore1.png';
-import appstore1 from '../src/images/appstore1.png';
 import PageNotFound from './components/PageNotFound';
+import Footer from './components/Footer';
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -94,7 +92,7 @@ function App() {
                 <i className="fas fa-bars"></i>
               </Button>
 
-              <LinkContainer to="/">
+              <LinkContainer className='ms-3' to="/">
                 <Navbar.Brand>Emapris</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -177,14 +175,14 @@ function App() {
           </Nav>
         </div>
         <main>
-          <Container className="mt-3">
+          <Container className="mt-1">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
-              <Route path="*" element={<PageNotFound />} />
+
               <Route
                 path="/forget-password"
                 element={<ForgetPasswordScreen />}
@@ -283,53 +281,12 @@ function App() {
               ></Route>
 
               <Route className="home" path="/" element={<HomeScreen />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Container>
         </main>
-
-        {/* footer */}
-        <div className="footer">
-          <div className="container">
-            <div className="row">
-              <div className="footer-col-1">
-                <h3>Download Our App</h3>
-                <p>Download App for Android and ios mobile phone. </p>
-                <div className="app-logo">
-                  <img src={playstore1} alt="img" />
-
-                  <img src={appstore1} alt="img" />
-                </div>
-              </div>
-              <div className="footer-col-2">
-                <h1>Emapris</h1>
-                <p>
-                  Our purpose is to sustainably make the pleasure and benefits
-                  of shopping accessible to the people.{' '}
-                </p>
-              </div>
-              <div className="footer-col-3">
-                <h3>Useful Links</h3>
-                <ul>
-                  <li>coupons</li>
-                  <li>Blog Post</li>
-                  <li>Return Policy</li>
-                  <li>Join Affiliate</li>
-                </ul>
-              </div>
-              <div className="footer-col-4">
-                <h3>Follow us on</h3>
-                <ul>
-                  <li>Facebook</li>
-                  <li>Twitter</li>
-                  <li>Intstagram</li>
-                  <li>YouTube</li>
-                </ul>
-              </div>
-            </div>
-            <hr />
-            <p className="copyright">All right reserved</p>
-          </div>
-        </div>
+        <Footer />
+      
       </div>
     </BrowserRouter>
   );

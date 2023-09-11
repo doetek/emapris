@@ -105,7 +105,7 @@ main {
   padding: 0;
 }
 
-.full-box .mt-3 {
+.full-box .mt-1 {
   margin-top: 0 !important;
 }
 
@@ -262,8 +262,9 @@ ul{
   max-width: 95%;
 }
 
-.mt-3{
+.mt-1{
   max-width: 95%;
+
 }
 
  /* this is responsive section */
