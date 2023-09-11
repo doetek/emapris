@@ -40,6 +40,7 @@ import useTitle from './useTitle';
 
 import playstore1 from '../src/images/playstore1.png';
 import appstore1 from '../src/images/appstore1.png';
+import PageNotFound from './components/PageNotFound';
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -183,6 +184,7 @@ function App() {
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
+              <Route path="/*" element={<PageNotFound />} />
               <Route
                 path="/forget-password"
                 element={<ForgetPasswordScreen />}
