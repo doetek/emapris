@@ -242,7 +242,6 @@ export default function ProductEditScreen() {
             <Form.Control
               value={brand}
               onChange={(e) => setBrand(e.target.value)}
-              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="countInStock">
@@ -258,7 +257,6 @@ export default function ProductEditScreen() {
             <Form.Control
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              required
             />
           </Form.Group>
           <div className="mb-3">
