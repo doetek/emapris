@@ -86,7 +86,7 @@ function App() {
         <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Navbar bg="dark" variant="dark" expand="md">
-            <div className='container-sm container-md container-lg'>
+            <div className="container-sm container-md container-lg">
               <Button
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
@@ -184,7 +184,7 @@ function App() {
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
-              <Route path="/*" element={<PageNotFound />} />
+              <Route path="*" element={<PageNotFound />} />
               <Route
                 path="/forget-password"
                 element={<ForgetPasswordScreen />}
