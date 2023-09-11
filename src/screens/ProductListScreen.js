@@ -138,7 +138,7 @@ export default function ProductListScreen() {
   };
 
   return (
-    <div>
+    <div className='container-sm container-md container-lg'>
       <Row>
         <Col>
           <h1>Products</h1>
@@ -161,7 +161,8 @@ export default function ProductListScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
-          <table className="table">
+        <div className="table-responsive">
+        <table className="table">
             <thead>
               <tr>
                 <th>ID</th>
@@ -201,6 +202,8 @@ export default function ProductListScreen() {
               ))}
             </tbody>
           </table>
+        </div>
+         
           <div>
             {[...Array(pages).keys()].map((x) => (
               <Link
