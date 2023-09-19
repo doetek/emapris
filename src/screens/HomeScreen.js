@@ -6,7 +6,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import elect from "../components/elect.png"
+import elect from '../components/elect.png';
 import { Link } from 'react-router-dom';
 // import data from '../data';
 
@@ -47,35 +47,42 @@ function HomeScreen() {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className="homescreen main">
       <Helmet>
         <title>Emapris</title>
       </Helmet>
       <div className="row-1">
-		<div className="col-2">
-			<h1> Emapris Your Online Store <br /> Start Shopping</h1>
-			<p>Success is not always about greatness. It is about consistency. Consistent <br/>hard work gains success. Greatness will come.</p>
-			<Link to='/signup' className="btnn">Explore Now &#x2192;</Link>
-</div>
-<div className="col-2">
-<img src={elect} alt="img" />
-</div>
-</div>
+        <div className="col-2">
+          <h1>
+            {' '}
+            Emapris Your Online Store <br /> Start Shopping
+          </h1>
+          <p>
+            Success is not always about greatness. It is about consistency.
+            Consistent <br />
+            hard work gains success. Greatness will come.
+          </p>
+          <Link to="/signup" className="btnn">
+            Explore Now &#x2192;
+          </Link>
+        </div>
+        <div className="col-2">
+          <img src={elect} alt="img" />
+        </div>
+      </div>
 
-      <h1 className='feature-heading'>Featured Products</h1>
-      <div className="products" >
+      <h1 className="feature-heading">Featured Products</h1>
+      <div className="products">
         {loading ? (
           <LoadingBox />
         ) : error ? (
-          <MessageBox style={{background:"white"}}>
+          <MessageBox style={{ background: 'white' }}>
             No internet <br />
-          Try: <br />
-          Checking the network cables, modem, and router
-          Reconnecting to Wi-Fi <br />
-          Running Windows Network Diagnostics <br />
-
-          ERR_INTERNET_DISCONNECTED
-          
+            Try: <br />
+            Checking the network cables, modem, and router Reconnecting to Wi-Fi{' '}
+            <br />
+            Running Windows Network Diagnostics <br />
+            ERR_INTERNET_DISCONNECTED
           </MessageBox>
         ) : (
           <Row>

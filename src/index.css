@@ -7,16 +7,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: radial-gradient(#FFF,#15B5F9); */
+ 
+}
+.app-container {
+  overflow-x: hidden;
+ 
+}
 
+.main{
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.site-container {
-  min-height: 100vh;
 
-}
-main {
-  flex: 1;
-  /* max-width: 100%; */
-}
 .btn-primary,
 .btn-outline-primary {
   background-color: #f0c040;
@@ -140,6 +143,7 @@ button.thumbnail {
   border-radius: 20px;
   background: radial-gradient(#FFF,#ff523b86);
   margin-bottom: 100px;
+  margin-top: 30px;
 }
 
 
@@ -148,7 +152,8 @@ button.thumbnail {
 	align-items: center;
   width: 100%;
 	flex-wrap: wrap;
-	/* justify-content: space-around; */
+  margin: auto;
+	
 
   
 }
@@ -284,8 +289,9 @@ ul{
 }
 
 .col-2 h1 {
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 30px;
+  line-height: 40px;
   margin: 25px 0;
+  text-align: center;
 }
 } 

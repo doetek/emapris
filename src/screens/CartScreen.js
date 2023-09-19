@@ -39,7 +39,7 @@ export default function CartScreen() {
   };
 
   return (
-    <div>
+    <div className='main'>
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>

@@ -38,7 +38,7 @@ export default function ForgetPasswordScreen() {
   };
 
   return (
-    <Container className="small-container">
+    <Container className="small-container main">
       <Helmet>
         <title>Forget Password</title>
       </Helmet>
