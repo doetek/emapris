@@ -40,7 +40,7 @@ export default function ProfileScreen() {
 
   const showToast = (message, type) => {
     toast[type](message, {
-      position: 'top-right',
+      position: 'top-center',
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -68,10 +68,13 @@ export default function ProfileScreen() {
           email,
           password,
         },
+       
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         }
+        
       );
+      console.log(data);
       dispatch({
         type: 'UPDATE_SUCCESS',
       });
@@ -101,7 +104,7 @@ export default function ProfileScreen() {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
+        <Form.Group className="mb-3" controlId="emali">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
@@ -110,6 +113,7 @@ export default function ProfileScreen() {
             required
           />
         </Form.Group>
+        
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Password</Form.Label>
           <div className="input-group">
@@ -126,7 +130,7 @@ export default function ProfileScreen() {
             </Button>
           </div>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
+        <Form.Group className="mb-3" controlId="confirm-password">
           <Form.Label>Confirm Password</Form.Label>
           <div className="input-group">
           <Form.Control

@@ -138,6 +138,7 @@ export default function OrderListScreen() {
                   </td>
                   <td>
                     <Button
+                    className='bg-success'
                       type="button"
                       variant="light"
                       onClick={() => {

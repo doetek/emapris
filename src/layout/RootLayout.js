@@ -15,7 +15,7 @@ export default function RootLayout() {
         </div>
   
         <div className="main">
-        <ToastContainer position="bottom-center" limit={1} />
+        <ToastContainer position="top-center" limit={1} />
           
           <Outlet />
         </div>
