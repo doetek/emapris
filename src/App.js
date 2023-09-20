@@ -1,5 +1,3 @@
-// import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,18 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 import RootLayout from './layout/RootLayout';
-import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Badge from 'react-bootstrap/Badge';
-// import Nav from 'react-bootstrap/Nav';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
-// import { LinkContainer } from 'react-router-bootstrap';
-import { useContext, useEffect, useState } from 'react';
-import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -28,10 +17,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
-// import Button from 'react-bootstrap/Button';
-import { getError } from './utils';
 import axios from 'axios';
-// import SearchBox from './components/SearchBox';
 import SearchScreen from './screens/SearchScreen';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardScreen from './screens/DashboardScreen';
@@ -53,6 +39,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
 
     <Route path="/" element={<RootLayout />}>
+      
 <Route index element={<HomeScreen  />} />
 <Route path="/product/:slug" element={<ProductScreen />} />
           <Route path="/cart" element={<CartScreen />} />
