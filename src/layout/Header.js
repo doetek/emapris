@@ -1,42 +1,33 @@
-import { Link } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
 import Navbar from 'react-bootstrap/Navbar';
 import Badge from 'react-bootstrap/Badge';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
 import { LinkContainer } from 'react-router-bootstrap';
 import { useContext, useEffect, useState } from 'react';
 import { Store } from '../Store';
-
-
-
 import Button from 'react-bootstrap/Button';
 import { getError } from '../utils';
 import axios from 'axios';
 import SearchBox from '../components/SearchBox';
 
-
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
-
-
-
-
 export default function Header() {
-
-    const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { state, dispatch: ctxDispatch } = useContext(Store);
   const { fullBox, cart, userInfo } = state;
+
+  const navigate = useNavigate();
 
   const signoutHandler = () => {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
-    window.location.href = '/signin';
+    // window.location.href = '/signin';
+    navigate('/signin');
   };
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [categories, setCategories] = useState([]);
@@ -53,8 +44,8 @@ export default function Header() {
     fetchCategories();
   }, []);
   return (
-    <div className=''>
-         <div
+    <div>
+      <div
         className={
           sidebarIsOpen
             ? fullBox
@@ -65,7 +56,7 @@ export default function Header() {
             : 'site-container d-flex flex-column'
         }
       >
- <header>
+        <header>
           <Navbar bg="dark" variant="dark" expand="md">
             <div className="container-sm container-md container-lg">
               <Button
@@ -75,7 +66,7 @@ export default function Header() {
                 <i className="fas fa-bars"></i>
               </Button>
 
-              <LinkContainer className='ms-3' to="/">
+              <LinkContainer className="ms-3" to="/">
                 <Navbar.Brand>Emapris</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -157,7 +148,7 @@ export default function Header() {
             ))}
           </Nav>
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }

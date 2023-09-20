@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: radial-gradient(#FFF,#15B5F9); */
+
  
 }
 .app-container {
@@ -73,11 +73,12 @@ body {
 }
 .side-navbar {
   width: 240px;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   left: -300px;
-  background-color: #100901;
+  background-color: #100901c7;
   transition: 0.5s;
+  z-index: 100;
 }
 
 .site-container {
@@ -155,8 +156,6 @@ button.thumbnail {
   width: 100%;
 	flex-wrap: wrap;
   margin: auto;
-	
-
   
 }
 .col-2{
@@ -272,6 +271,11 @@ ul{
 .mt-1{
   max-width: 95%;
 
+}
+
+.not-found {
+  text-align: center;
+  padding-top: 100px;
 }
 
  /* this is responsive section */

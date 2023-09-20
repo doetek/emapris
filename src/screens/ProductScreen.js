@@ -133,7 +133,7 @@ function ProductScreen() {
             alt={product.name}
           ></img>
         </Col>
-        <Col md={3}>
+        <Col md={4}>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Helmet>
@@ -148,10 +148,10 @@ function ProductScreen() {
               ></Rating>
             </ListGroup.Item>
 
-            <ListGroup.Item>Pirce : #{product.price}</ListGroup.Item>
+            <ListGroup.Item>Pirce : ₦ {product.price.toLocaleString()}</ListGroup.Item>
 
             <ListGroup.Item>
-              <Row xs={1} md={2} className="g-2">
+              <Row xs={3} md={4} className="g-2">
                 {[product.image, ...product.images].map((x) => (
                   <Col key={x}>
                     <Card>
@@ -182,7 +182,7 @@ function ProductScreen() {
                   <Row>
                     <Col>Price:</Col>
 
-                    <Col>#{product.price}</Col>
+                    <Col>₦ {product.price.toLocaleString()}</Col>
 
                   </Row>
                 </ListGroup.Item>

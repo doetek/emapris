@@ -4,7 +4,7 @@ import appstore1 from '../images/appstore1.png';
 
 export default function Footer() {
   return (
-    <div>
+    <div >
          <div className="footer">
           <div className="container">
             <div className="row">

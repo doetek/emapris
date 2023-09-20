@@ -38,15 +38,15 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '#1 to #1000',
+    name: '₦1 to ₦1000',
     value: '1-50',
   },
   {
-    name: '#1000 to #10000',
+    name: '₦1000 to ₦10000',
     value: '51-200',
   },
   {
-    name: '#10000 to #100000',
+    name: '₦10000 to ₦100000',
     value: '201-1000',
   },
 ];

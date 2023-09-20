@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer } from 'react';
 import { toast } from 'react-toastify';
@@ -19,7 +18,10 @@ const reducer = (state, action) => {
     case 'FETCH_SUCCESS':
       return {
         ...state,
-        orders: action.payload,
+        orders: action.payload.map((order, index) => ({
+          ...order,
+          serialNumber: index + 1,
+        })),
         loading: false,
       };
     case 'FETCH_FAIL':
@@ -58,6 +60,7 @@ export default function OrderListScreen() {
         const { data } = await axios.get(`/api/orders`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
+
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
       } catch (err) {
         dispatch({
@@ -107,6 +110,7 @@ export default function OrderListScreen() {
           <table className="table">
             <thead>
               <tr>
+                <th>S/n</th>
                 <th>ID</th>
                 <th>USER</th>
                 <th>DATE</th>
@@ -119,15 +123,18 @@ export default function OrderListScreen() {
             <tbody>
               {orders.map((order) => (
                 <tr key={order._id}>
+                  <td>{order.serialNumber}</td>
                   <td>{order._id}</td>
-                  <td>{order.user ? order.user.name : 'DELETED USER'}</td>
+                  <td>{order.user ? order.user.email : 'DELETED USER'}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>{order.totalPrice.toFixed(2)}</td>
-                  <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
+                  <td>₦ {order.totalPrice.toLocaleString()}</td>
+                  <td>
+                    {order.isPaid ? order.paidAt.substring(0, 10) : 'Not yet'}
+                  </td>
                   <td>
                     {order.isDelivered
                       ? order.deliveredAt.substring(0, 10)
-                      : 'No'}
+                      : 'Not yet'}
                   </td>
                   <td>
                     <Button
