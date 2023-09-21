@@ -6,8 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
- 
 }
 .app-container {
   overflow-x: hidden;
@@ -18,7 +16,7 @@ body {
   width: 40%;
 } */
 
-.main{
+.main {
   max-width: 96%;
   margin-left: auto;
   margin-right: auto;
@@ -140,57 +138,54 @@ button.thumbnail {
   padding: 0;
 }
 
-
 /* Edited part start */
 
-.signup, 
-.signin{
+.signup,
+.signin {
   padding: 20px;
   border-radius: 20px;
-  background: radial-gradient(#FFF,#ff523b86);
+  background: radial-gradient(#fff, #ff523b86);
   margin-bottom: 100px;
   margin-top: 30px;
 }
 
-
-.row-1{
-	display: flex;
-	align-items: center;
+.row-1 {
+  display: flex;
+  align-items: center;
   width: 100%;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: auto;
-  
 }
-.col-2{
-	flex-basis: 50%;
-	min-width: 300px;
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
 }
 
-.col-2 img{
-	max-width: 100%;
-	padding: 50px 0;
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
   margin-left: 40px;
 }
-.col-2 h1{
-	font-size: 45px;
-	line-height: 60px;
-	margin: 25px 0;
+.col-2 h1 {
+  font-size: 45px;
+  line-height: 60px;
+  margin: 25px 0;
 }
 
-.col-2 a{
+.col-2 a {
   text-decoration: none;
 }
 .btnn {
-	display: inline-block;
-	background: #ff523b;
-	color: #fff;
-	padding: 8px 30px;
-	margin: 30px 0;
-	border-radius: 30px;
-	transition: background 0.5s;
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
 }
-.btnn:hover{
-	background: #563434;
+.btnn:hover {
+  background: #563434;
 }
 /* .but{
   background-color: rgba(0, 0, 255, 0.788) !important;
@@ -199,83 +194,84 @@ button.thumbnail {
   background: #ff523b;
 }
 
-.feature-heading{
-text-align: center;
-margin-bottom: 20px;
+.feature-heading {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* footer */
-.footer{
-	background: #000;
-	color: #8a8a8a;
-	font-size: 14px;
-	padding: 30px 0 10px;
+.footer {
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 30px 0 10px;
 }
 
-.footer p{
-	color: #8a8a8a;
+.footer p {
+  color: #8a8a8a;
 }
-.footer h3{
-	color: #fff;
-	margin-bottom: 20px;
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
 }
-.footer-col-1, footer-col-2, footer-col-3, footer-col-4{
-	min-width: 250px;
-	margin-bottom: 20px;
+.footer-col-1,
+footer-col-2,
+footer-col-3,
+footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
 }
-.footer-col-1{
-	flex-basis: 30%;
+.footer-col-1 {
+  flex-basis: 30%;
 }
-.footer-col-2{
-	flex: 1;
-	text-align: center;
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
 }
-.footer-col-2 img{
-	width:180px;
-	margin-bottom: 20px;
+.footer-col-2 img {
+  width: 180px;
+  margin-bottom: 20px;
 }
-.footer-col-3, .footer-col-4{
-	flex-basis: 12%;
-	text-align: center;
-}
-
-ul{
-	list-style-type: none;
-}
-.app-logo{
-	margin-top: 20px;
-}
-.app-logo img{
-	width: 140px;
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
 }
 
-.footer vhr{
-	border: none;
-	background: #b5b5b5;
-	height: 1px;
-	margin: 20px 0;
+ul {
+  list-style-type: none;
 }
-.copyright{
-	text-align: center;
+.app-logo {
+  margin-top: 20px;
 }
-
-.menu-icon{
-	width: 28px;
-	margin-left: 20px;
-	display: none;
+.app-logo img {
+  width: 140px;
 }
 
+.footer vhr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright {
+  text-align: center;
+}
+
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
 
 /* Edited part end*/
 
-
-.container-sm{
+.container-sm {
   max-width: 95%;
 }
 
-.mt-1{
+.mt-1 {
   max-width: 95%;
-
 }
 
 .not-found {
@@ -283,34 +279,27 @@ ul{
   padding-top: 100px;
 }
 
- /* this is responsive section */
+/* this is responsive section */
 
 @media only screen and (min-width: 800px) {
- 
 }
 
 @media only screen and (max-width: 800px) {
-  .col-2 img{
+  .col-2 img {
     display: none;
   }
 
   .col-2 {
     flex-basis: 100%;
     min-width: 300px;
+  }
+
+  .col-2 h1 {
+    font-size: 25px;
+    line-height: 40px;
+    margin: 25px 0;
+    /* text-align: center; */
+    text-align: center;
+  }
 }
 
-.col-2 h1 {
-  font-size: 25px;
-  line-height: 40px;
-  margin: 25px 0;
-  /* text-align: center; */
- text-align: center;
-}
-} 
-
-@media (min-width: 300px){
-.navbar-expand-sm {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-}
-}

@@ -57,7 +57,7 @@ export default function Header() {
         }
       >
         <header>
-          <Navbar bg="dark" variant="dark" expand="sm">
+          <Navbar bg="dark" variant="dark" expand="md">
             <div className="container-sm container-md container-lg">
               <Button
                 variant="dark"
