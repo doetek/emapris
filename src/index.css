@@ -11,9 +11,12 @@ body {
 }
 .app-container {
   overflow-x: hidden;
-
- 
 }
+
+/* .col-5 {
+  flex: auto;
+  width: 40%;
+} */
 
 .main{
   max-width: 96%;
