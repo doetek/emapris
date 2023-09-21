@@ -297,9 +297,10 @@ ul{
 }
 
 .col-2 h1 {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 40px;
   margin: 25px 0;
-  text-align: center;
+  /* text-align: center; */
+ text-align: center;
 }
 } 
