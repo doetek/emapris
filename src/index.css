@@ -307,3 +307,10 @@ ul{
  text-align: center;
 }
 } 
+
+@media (min-width: 300px){
+.navbar-expand-sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+}
