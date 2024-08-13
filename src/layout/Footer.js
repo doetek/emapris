@@ -123,7 +123,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faTwitter} />
-                  <Link to="#"> Twitter</Link>
+                  <Link to="#"> X </Link>
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faInstagram} />
