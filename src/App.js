@@ -32,6 +32,7 @@ import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
 import useTitle from './useTitle';
 import PageNotFound from './components/PageNotFound';
+import SellerScreen from './screens/SellerScreen';
 
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
@@ -108,6 +109,14 @@ const router = createBrowserRouter(
                  element={
                    <AdminRoute>
                      <OrderListScreen />
+                   </AdminRoute>
+                 }
+               ></Route>
+                <Route
+                 path="/admin/sellers"
+                 element={
+                   <AdminRoute>
+                     <SellerScreen />
                    </AdminRoute>
                  }
                ></Route>

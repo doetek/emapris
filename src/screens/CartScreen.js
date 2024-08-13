@@ -84,7 +84,7 @@ export default function CartScreen() {
                         <i className="fas fa-plus-circle"></i>
                       </Button>
                     </Col>
-                    <Col md={3}>₦ {item.price.toLocaleString()}</Col>
+                    <Col md={3} className='price'>₦ {item.price.toLocaleString()}</Col>
                     <Col md={2}>
                       <Button
                         onClick={() => removeItemHandler(item)}
@@ -104,7 +104,7 @@ export default function CartScreen() {
             <Card.Body>
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  <h5>
+                  <h5 className='price'>
                     Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
                     items) : 
                     ₦ {cartItems.reduce((a, c) => a + c.price * c.quantity, 0).toLocaleString()}

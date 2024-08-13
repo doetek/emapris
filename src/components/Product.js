@@ -32,7 +32,7 @@ function Product(props) {
   };
 
   return (
-    <Card>
+    <Card className='pro'>
       <Link to={`/product/${product.slug}`}>
         <img src={product.image} className="card-img-top" alt={product.name} />
       </Link>
@@ -41,7 +41,7 @@ function Product(props) {
           <Card.Title>{product.name}</Card.Title>
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
-        <Card.Text>₦ {product.price.toLocaleString()}</Card.Text>
+        <Card.Text className='price'>₦ {product.price.toLocaleString()}</Card.Text>
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
             Out of stock

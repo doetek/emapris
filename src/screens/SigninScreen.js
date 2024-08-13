@@ -1,3 +1,4 @@
+
 import Axios from 'axios';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -56,48 +57,50 @@ export default function SigninScreen() {
         <title>Sign In</title>
       </Helmet>
 
-      <div className='signin'>
-
-      <h1 className="my-3 text-uppercase text-center">Sign In</h1>
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <div className="input-group">
+      <div className="signin">
+        <h1 className="my-3 text-uppercase text-center">Sign In</h1>
+        <Form onSubmit={submitHandler}>
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label>
+              <i className="fa fa-envelope" /> Email
+            </Form.Label>
             <Form.Control
-              type={showPassword ? 'text' : 'password'}
+              type="email"
               required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <Button
-              variant="outline-secondary"
-              onClick={togglePasswordVisibility}
-            >
-              {showPassword ? <img src={eyes} alt="open" /> : '👁️'}
-            </Button>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Label>
+              <i className="fa fa-lock" /> Password
+            </Form.Label>
+            <div className="input-group">
+              <Form.Control
+                type={showPassword ? 'text' : 'password'}
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <Button
+                variant="outline-secondary"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <img src={eyes} alt="open" /> : '👁️'}
+              </Button>
+            </div>
+          </Form.Group>
+          <div className="mb-3">
+            <Button type="submit">Sign In</Button>
           </div>
-        </Form.Group>
-        <div className="mb-3">
-          <Button type="submit">Sign In</Button>
-        </div>
-        <div className="mb-3">
-          New customer?{' '}
-          <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
-        </div>
-        <div className="mb-3">
-          Forget Password? <Link to={`/forget-password`}>Reset Password</Link>
-        </div>
-      </Form>
+          <div className="mb-3">
+            New customer?{' '}
+            <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+          </div>
+          <div className="mb-3">
+            Forget Password? <Link to={`/forget-password`}>Reset Password</Link>
+          </div>
+        </Form>
       </div>
-      
     </Container>
   );
 }

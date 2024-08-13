@@ -12,6 +12,7 @@ import Button from 'react-bootstrap/Button';
 import { getError } from '../utils';
 import axios from 'axios';
 import SearchBox from '../components/SearchBox';
+import emalogo from "../images/emalogo.png"
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -67,7 +68,7 @@ export default function Header() {
               </Button>
 
               <LinkContainer className="ms-3" to="/">
-                <Navbar.Brand>Emapris</Navbar.Brand>
+                <Navbar.Brand> <img src={emalogo} style={{height:"50px", width:"100%"}} alt="brand" /> </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">

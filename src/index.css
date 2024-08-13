@@ -11,10 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/* .col-5 {
-  flex: auto;
-  width: 40%;
-} */
 
 .main {
   max-width: 96%;
@@ -45,10 +41,18 @@ body {
 .product img {
   width: 100%;
   max-width: 400px;
+
 }
 .product-info {
   padding: 1rem;
 }
+.price{
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
 .img-large {
   max-width: 100%;
 }
@@ -234,12 +238,18 @@ footer-col-4 {
 }
 .footer-col-3,
 .footer-col-4 {
-  flex-basis: 12%;
+  flex-basis: 28%;
   text-align: center;
 }
 
 ul {
   list-style-type: none;
+}
+
+li > a{
+  text-decoration: none;
+  color: #8a8a8a;
+  cursor: pointer;
 }
 .app-logo {
   margin-top: 20px;
